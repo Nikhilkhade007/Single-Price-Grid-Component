@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Single Price Grid Component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --clr-primary-1: hsl(179, 62%, 43%);
+        --clr-primary-2: hsl(71, 73%, 54%);
+        --clr-natural-1: hsl(204, 43%, 93%);
+        --clr-natural-2: hsl(218, 22%, 67%);
+        --ff--: "Karla", sans-serif;
+        --ff-normal: 400;
+        --ff-bold: 700;
+      }
+      body {
+        background-color: var(--clr-natural-1);
+        box-sizing: border-box;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        min-height: 100vh;
+      }
+      .main {
+        display: grid;
+        font-family: var(--ff--);
+        grid-template-columns: 1fr 1fr;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 15px 15px 50px gray;
+        max-width: 620px;
+      }
+      .col-3 {
+        padding: 40px;
+        color: var(--clr-natural-2);
+      }
+      .top-div {
+        background-color: #fff;
+        grid-column: span 2;
+        display: grid;
+        gap: 20px;
+      }
+      .title {
+        color: var(--clr-primary-1);
+        font-weight: var(--ff-bold);
+        font-size: 2rem;
+      }
+      .description {
+        line-height: 1.5;
+      }
+      .gurranty-heading {
+        color: var(--clr-primary-2);
+        font-weight: var(--ff-bold);
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .bottom-left {
+        background-color: var(--clr-primary-1);
+        color: #fff;
+        display: grid;
+        gap: 1rem;
+      }
+      .subscription {
+        font-size: 1.2rem;
+      }
+      .price {
+        margin: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        color: var(--clr-natural-1);
+      }
+      .price > div {
+        display: flex;
+        color: lightgrey;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .price > div > span {
+        font-size: 2rem;
+        color: #fff;
+        font-weight: var(--ff-bold);
+      }
+      .botton {
+        border: none;
+        background-color: var(--clr-primary-2);
+        color: #fff;
+        font-weight: var(--ff-bold);
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 1px 5px 20px gray;
+        cursor: pointer;
+      }
+      .botton:hover {
+        background-color: hsl(71, 82%, 41%);
+      }
+      .bottom-right {
+        background-color: hsl(179, 51%, 49%);
+        color: #fff;
+        display: grid;
+        gap: 1rem;
+      }
+      .reason {
+        display: grid;
+        line-height: 1.5;
+        font-size: 0.9rem;
+        color: hsl(179, 69%, 70%);
+      }
+      @media (max-width: 600px) {
+        .main {
+          grid-template-columns: none;
+          grid-template-rows: auto;
+        }
+        .top-div {
+          grid-column-start: 1;
+          grid-column-end: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="col-3 top-div">
+        <h1 class="title">Join our community</h1>
+        <div class="description">
+          <div class="gurranty-heading">
+            30-day, hassle-free money back guarantee
+          </div>
+          <p>
+            Gain access to our full library of tutorials along with expert code
+            reviews. Perfect for any developers who are serious about honing
+            their skills.
+          </p>
+        </div>
+      </div>
+      <div class="col-3 bottom-left">
+        <h3 class="subscription">Monthly Subscription</h3>
+        <div class="price">
+          <div><span>&dollar;29</span>per month</div>
+          <p>Full access for less than &dollar;1 a day</p>
+        </div>
+        <button class="botton">Sign Up</button>
+      </div>
+      <div class="col-3 bottom-right">
+        <h3 class="reason-heading">Why Us</h3>
+        <p class="reason">
+          Tutorials by industry experts<br />Peer &amp; expert code review
+          <br />
+          Coding exercises <br />
+          Access to our GitHub repos <br />
+          Community forum <br />
+          Flashcard decks <br />
+          New videos every week
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
